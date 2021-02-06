@@ -96,14 +96,14 @@ $(document).ready(function () {
             .then(function (data) {
                 console.log(data);
                 var newFiveDayCard = $('<div>');
-                newFiveDayCard.attr('class', 'card mt-4');
+                newFiveDayCard.attr('class', 'card mt-4 div-center');
                 var newFiveDayCardHeader = $('<p>');
                 newFiveDayCardHeader.attr('class', 'font-weight-bold px-4 current-five-day');
                 newFiveDayCardHeader.text("5 Day Forecast");
                 var newFiveDayCardContainer = $('<div>');
-                newFiveDayCardContainer.attr('class', 'container px-5');
+                newFiveDayCardContainer.attr('class', 'container px-5 div-center');
                 var newFiveDayCardRow = $('<div>');
-                newFiveDayCardRow.attr('class', 'row row-cols-1 row-cols-md-2 row-cols-sm-1')
+                newFiveDayCardRow.attr('class', 'row row-cols-1 row-cols-md-2 row-cols-sm-1 div-center')
                 $('#fiveday-forecast-holder').append(newFiveDayCard);
                 newFiveDayCard.append(newFiveDayCardHeader, newFiveDayCardContainer);
                 newFiveDayCardContainer.append(newFiveDayCardRow);

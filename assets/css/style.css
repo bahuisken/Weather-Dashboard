@@ -72,6 +72,9 @@ body {
 .day-card-col{
   margin: 0px 10px 0px 5px;
   font-size: 10px;
+  min-width: 100px;
+  max-width: 125px;
+  text-align:center;
 }
 
 .five-day-city-stats{
@@ -83,8 +86,11 @@ body {
 .five-day-icon{
   height: 38px;
 }
+
+.div-center{
+  margin:auto;
+}
 /* Responsive Styles */
 
 @media (max-width: 576px) { 
-
 }
