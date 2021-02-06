@@ -73,7 +73,7 @@ body {
   margin: 0px 10px 0px 5px;
   font-size: 10px;
   min-width: 100px;
-  max-width: 125px;
+  max-width: 150px;
   text-align:center;
 }
 
@@ -92,5 +92,13 @@ body {
 }
 /* Responsive Styles */
 
-@media (max-width: 576px) { 
+@media (max-width: 560) { 
+  .day-card-col{
+    margin: 0px 10px 0px 5px;
+    font-size: 10px;
+    min-width: 100px;
+    max-width: 125px;
+    text-align:center;
+  }
+  
 }
