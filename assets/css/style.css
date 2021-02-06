@@ -1,0 +1,90 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.custom-header {
+  position: relative;
+  background-color: #343a40;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+}
+.custom-h1{
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.searched-city {
+  cursor: pointer;
+}
+
+.current-city{
+  background-color: #99d6ff;
+  font-size: 2rem;
+}
+
+.current-five-day{
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 2rem;
+  line-height: 50px;
+}
+
+.current-city-stats{
+  font-size: 1rem;
+  line-height: 3rem;
+  margin: 0px 0px 8px;
+  padding: 0px 12px;
+}
+
+.current-icon{
+  height: 50px;
+}
+
+.uvi-favorable{
+  color: #FFFFFF;
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 2px 5px;
+  background-color: #009933;
+}
+
+.uvi-moderate{
+  color: #FFFFFF;
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 2px 5px;
+  background-color:  #ffcc00;
+}
+
+.uvi-severe{
+  color: #FFFFFF;
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 2px 5px;
+  background-color:  #ff0000;
+}
+
+.day-card-col{
+  margin: 0px 10px 0px 5px;
+  font-size: 10px;
+}
+
+.five-day-city-stats{
+ color:#FFFFFF;
+ font-size: .8rem;
+ line-height: 3rem;
+}
+
+.five-day-icon{
+  height: 38px;
+}
+/* Responsive Styles */
+
+@media (max-width: 576px) { 
+
+}
