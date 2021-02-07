@@ -31,7 +31,6 @@ $(document).ready(function () {
     intit();
 
     // Function to get current weather
-
     function currentWeather(city) {
         var currentApiURL = `${currentBaseURL}${city}${apiKeyOW}${units}`
         console.log("Searched City is: " + city + '\n' + currentApiURL);
@@ -61,12 +60,13 @@ $(document).ready(function () {
                 var latVal = data.coord.lat;
                 var lonVal = data.coord.lon;
                 console.log(latVal + ' ' + lonVal);
+                // Fetch UV Index from One Call API using lat and lon from current weather api
                 return fetch(`${uviBaseUrl}lat=${latVal}&lon=${lonVal}&exclude=minutely,hourly,daily,alerts${apiKeyOW}`);
 
             })
             .then(function (response) {
                 return response.json();
-
+                // UV Index logic
             })
             .then(function (data) {
                 var uviLevel = data.current.uvi;
@@ -85,7 +85,7 @@ $(document).ready(function () {
     }
 
 
-
+    // Function to get 5 day forecast
     function fiveDayWeather(city) {
         var fiveDayApiURL = `${fiveDayBaseURL}${city}${apiKeyOW}${units}`
         console.log("Searched City is: " + city + '\n' + fiveDayApiURL);
@@ -145,10 +145,15 @@ $(document).ready(function () {
             $('#fiveday-forecast-holder').empty();
             currentWeather(searchedCity);
             fiveDayWeather(searchedCity);
+            analytics.track('City Searched', {
+                city: searchedCity,
+                saerch_type: "new"
+            });
         } else {
             return;
         }
     });
+
     // Previously searched city event listner
     $("#previous-searches").on("click", "li", function () {
         searchedCity = $(this).text();
@@ -156,6 +161,10 @@ $(document).ready(function () {
         $('#fiveday-forecast-holder').empty();
         currentWeather(searchedCity);
         fiveDayWeather(searchedCity);
+        analytics.track('City Searched', {
+            city: searchedCity,
+            saerch_type: "previous"
+        });
 
     });
 
