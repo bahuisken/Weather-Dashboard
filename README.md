@@ -1,6 +1,6 @@
 # Weather-Dashboard
 
-For this assignment, I was tasked with creating a weather dashboard. This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery, and by utilizing 3rd Pary APIs.
+For this assignment, I was tasked with creating a weather dashboard. This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery, and by utilizing 3rd Party APIs.
 
 I used 3 endpoints from the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities, including the current weather, the current UV index, and a 5 day forecast. 
 
